@@ -14,10 +14,5 @@ namespace Plumsail.Repository.Implementations
             : base(db)
         {
         }
-
-        protected override IQueryable<SomethingType> GetAllIncludedQuery()
-        {
-            return Db.SomethingTypes.AsQueryable();
-        }
     }
 }

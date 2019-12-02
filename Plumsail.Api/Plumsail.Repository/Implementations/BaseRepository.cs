@@ -23,6 +23,8 @@ namespace Plumsail.Repository.Implementations
             return await query.ToListAsync();
         }
 
-        protected abstract IQueryable<T> GetAllIncludedQuery();
+        protected virtual IQueryable<T> GetAllIncludedQuery() =>
+            Db.Set<T>().AsQueryable();
+            
     }
 }
